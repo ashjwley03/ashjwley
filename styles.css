@@ -110,32 +110,36 @@ body {
 
 
 
+
+
 /* ==================== MAIN CONTENT ==================== */
 .content {
     max-width: 900px;
     margin: 0 auto;
     padding: 80px 40px 40px;
     animation: fadeIn 0.8s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .intro {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .intro-heading {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 400;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #222;
+    margin-bottom: 32px;
     animation: fadeInUp 0.6s ease;
 }
 
 .intro-text {
-    font-size: 42px;
+    font-size: 28px;
     font-weight: 400;
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.7;
+    color: #555;
     margin-bottom: 20px;
     animation: fadeInUp 0.8s ease;
 }
@@ -145,35 +149,124 @@ body {
 }
 
 .about-text {
-    font-size: 42px;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.7;
+    color: #444;
     animation: fadeInUp 1s ease;
+    margin-bottom: 20px;
 }
 
+/* ==================== INFO CARDS ==================== */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 60px 0;
+}
+
+.info-card {
+    padding: 32px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-pink {
+    background: #f8f9fa;
+    border-left: 4px solid #e74c3c;
+}
+
+.card-blue {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.card-emoji {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.info-card p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+}
+
+/* ==================== CURRENT SECTION ==================== */
 .current {
     margin-top: 80px;
     margin-bottom: 60px;
+    padding: 48px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    border-left: 4px solid #2c3e50;
 }
 
 .section-heading {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
-    color: #000;
-    margin-bottom: 32px;
+    color: #222;
+    margin-bottom: 24px;
+}
+
+.current-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .highlight {
     font-weight: 600;
-    color: #000;
     position: relative;
     transition: all 0.3s ease;
     cursor: default;
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
-.highlight:hover {
-    color: #0066CC;
+.highlight-name {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+}
+
+.highlight-accent {
+    color: #16a085;
+}
+
+.highlight-blue {
+    color: #3498db;
+}
+
+.highlight-purple {
+    color: #8e44ad;
+}
+
+.highlight-green {
+    color: #27ae60;
+}
+
+.highlight-orange {
+    color: #e67e22;
+}
+
+.highlight-teal {
+    color: #16a085;
+}
+
+.highlight-inline {
+    color: #34495e;
+    font-weight: 500;
 }
 
 /* ==================== PROJECTS PAGE ==================== */
@@ -562,11 +655,33 @@ body {
         padding: 60px 24px 24px;
     }
 
-    .intro-heading,
-    .intro-text,
-    .about-text {
-        font-size: 28px;
+    .intro-heading {
+        font-size: 32px;
     }
+
+    .intro-text {
+        font-size: 20px;
+    }
+
+    .about-text {
+        font-size: 18px;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 40px 0;
+    }
+
+    .info-card {
+        padding: 24px;
+    }
+
+    .current {
+        padding: 32px 24px;
+    }
+
+
 
     .page-title {
         font-size: 32px;
